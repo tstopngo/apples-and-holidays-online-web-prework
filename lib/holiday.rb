@@ -75,11 +75,11 @@ def all_holidays_with_bbq(holiday_hash)
   # include the string "BBQ"
   holiday_hash.each do |season, holiday|
     holiday_keys = []
-    holiday.each do |holiday, supplies|
-      supplies.each do |check|
-        if check == "BBQ"
-          holiday_keys << holiday
-          end
+    holiday.each do |holiday, supplies| #christmas comes in and Lights and wreath for supploes
+      supplies.each do |check|          #each supply comes through first is Lights
+        if check == "BBQ"               #check if Lights == BBQ
+          
+          end                           #not BBQ end and go to New years
       end
     end  
   end
