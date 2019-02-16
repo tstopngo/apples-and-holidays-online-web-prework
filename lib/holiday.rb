@@ -63,8 +63,8 @@ def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each do |season, holiday|
     puts season.to_s.capitalize! << ":"
     holiday.each do |holiday, supplies|
-      supplies = supplies.join(", ")
-      holiday = holiday.to_s.split("_").map {|w| w.capitalize}.join(" ")<< ":"
+      supplies = supplies.join(", ")    #joins the supplies together each iternation
+      holiday = holiday.to_s.split("_").map {|w| w.capitalize}.join(" ")<< ":" #each holiday gets converted to a string, split if it has _, then captilized each letter of holiday and joined back together new_years >> "new_years" >> [New, years] >> [New, Years] >> New Years
       puts "  " + holiday + " " + supplies
     end
   end
@@ -73,6 +73,7 @@ end
 def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
   # include the string "BBQ"
+  
   
 end
 end
